@@ -21,7 +21,7 @@ PRIME = "prime"
 
 
 def is_prime(number):
-    i = 0
+    i = 1
     k = 0
     while i <= number:
         if number % i == 0:
