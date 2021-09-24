@@ -33,7 +33,7 @@ def is_prime(number):
         return False
 
 
-def filter_numbers(numbers_list, type):
+def filter_numbers(numbers_list, number_type):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -45,24 +45,9 @@ def filter_numbers(numbers_list, type):
     <<< [2, 4]
     """
 
-    def filter_odd_num(number):
-        if (number % 2) != 0:
-            return True
-        else:
-            return False
-
-
-    def filter_even_num(number):
-        if (number % 2) == 0:
-            return True
-        else:
-            return False
-
-    if type == "odd":
-        return list(filter(filter_odd_num, numbers_list))
-    elif type =="even":
-        return list(filter(filter_even_num, numbers_list))
-    elif type =="prime":
+    if number_type == ODD:
+        return list(filter(lambda n: n % 2 != 0, numbers_list))
+    elif number_type == EVEN:
+        return list(filter(lambda n: n % 2 == 0, numbers_list))
+    elif number_type == PRIME:
         return list(filter(is_prime, numbers_list))
-
-
