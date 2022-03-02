@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+                    <img src="{{post.preview_pic.url}}" alt = "There must image">
+
+                    <p>{{ post.title }}</p>
+                    <p>{{ post.body}}</p>
+                    <p>
+                        <a href="{% url 'posts:posts_list' %}">RETURN TO POST LIST</a>
+                    </p>
+</body>
+</html>
